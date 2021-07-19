@@ -1,0 +1,33 @@
+.banner {
+  height: 200px;
+  background: url('../assets/banner-background.svg') no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.bgColor {
+  width: inherit;
+  height: 100%;
+  background: #00000060;
+  padding: 4rem 0;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.textOne {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.textTwo {
+  font-size: 32px;
+  font-weight: 900;
+}

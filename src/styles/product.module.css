@@ -1,0 +1,47 @@
+.product {
+  width: 150px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.productImage {
+  width: inherit;
+}
+
+.productName {
+  font-size: 10px;
+  font-weight: 600;
+  color: #7A7A7A;
+}
+
+.listPrice, .installments {
+  font-size: 11px;
+  color: #7A7A7A;
+  font-weight: 400;
+  text-decoration-line: line-through;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.installments {
+  text-decoration: none;
+}
+
+.button {
+  font-size: 'Ubuntu', sans-serif;
+  width: 100%;
+  border: none;
+  color: white;
+  background: #000;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: .5rem 0;
+  cursor: pointer;
+}

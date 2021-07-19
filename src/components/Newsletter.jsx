@@ -1,17 +1,32 @@
 import React from 'react';
 
+import styles from '../styles/newsletter.module.css';
+
 const Newsletter = () => {
   return (
-    <section>
-      <p>Participe de nossas news com promoções e novidades!</p>
-      <form>
+    <section className={styles.newsletter}>
+      <p className={styles.text}>
+        Participe de nossas news com promoções e novidades!
+      </p>
+      <form className={styles.form}>
         <label htmlFor="name-input">
-          <input type="text" placeholder="Digite seu nome" />
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Digite seu nome"
+          />
         </label>
         <label htmlFor="email-input">
-          <input type="email" placeholder="Digite seu email" />
+          <input
+            className={styles.input}
+            type="email"
+            placeholder="Digite seu email"
+          />
         </label>
-        <button type="button">Eu quero!</button>
+        <button
+          className={styles.button}
+          type="button"
+        >Eu quero!</button>
       </form>
     </section>
   );

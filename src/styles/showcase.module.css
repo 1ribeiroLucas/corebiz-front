@@ -1,0 +1,21 @@
+.showcase {
+  height: 450px;
+  margin: .4rem;
+  margin-bottom: 0;
+  overflow-y: hidden;
+}
+
+.topSeller {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.divider {
+  width: 40px;
+  border: solid 3px #C0C0C0;
+}
+
+.products {
+  display: flex;
+  height: 380px;
+}
