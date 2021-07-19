@@ -33,3 +33,8 @@
   text-align: center;
   cursor: pointer;
 }
+
+.button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}

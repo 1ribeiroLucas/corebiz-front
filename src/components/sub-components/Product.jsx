@@ -1,12 +1,16 @@
-import React, {Fragment} from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
+import CoreContext from '../../context/Context';
 
 import styles from '../../styles/product.module.css';
 
+import flag from '../../assets/flag.svg';
+
 const Product = (props) => {
+  const {setCartItems} = useContext(CoreContext);
   const {
+    productId,
     productName,
-    stars,
     imageUrl,
     listPrice,
     price,
@@ -17,32 +21,36 @@ const Product = (props) => {
     <div className={styles.product}>
       <img className={styles.productImage} src={imageUrl} alt='' />
       <p className={styles.productName}>{productName}</p>
-      <p>{stars}</p>
       <p className={styles.listPrice}>{listPrice && `de R$ ${listPrice}`}</p>
       <p className={styles.price}>por R$ {price}</p>
       {
         installments.map(({quantity, value}, index) => {
           return (
-            <Fragment key={index}>
-              <span
-                className={styles.installments}
-              >
-                ou em {quantity}x de {value}
-              </span>
-            </Fragment>
+            <span key={index} className={styles.installments}>
+              ou em {quantity}x de {value}
+            </span>
           );
         })
       }
-      <button className={styles.button} type="button">COMPRAR</button>
+      <button
+        className={styles.button}
+        type="button"
+        onClick={() => setCartItems((state) => ([...state, productId]))}
+      >COMPRAR</button>
+      <img
+        src={flag}
+        alt=""
+        className={listPrice ? styles.flagOn : styles.flagOff }
+      />
     </div>
   );
 };
 
 Product.propTypes = {
+  productId: PropTypes.number.isRequired,
   productName: PropTypes.string.isRequired,
-  stars: PropTypes.number.isRequired,
   imageUrl: PropTypes.string.isRequired,
-  listPrice: PropTypes.number.isRequired,
+  listPrice: PropTypes.number,
   price: PropTypes.number.isRequired,
   installments: PropTypes.arrayOf(PropTypes.shape({
     quantity: PropTypes.number.isRequired,

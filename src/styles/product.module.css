@@ -6,6 +6,7 @@
   justify-content: space-between;
   margin: 0 1rem;
   text-align: center;
+  position: relative;
 }
 
 .productImage {
@@ -44,4 +45,13 @@
   font-size: 16px;
   padding: .5rem 0;
   cursor: pointer;
+}
+
+.flagOn {
+  position: absolute;
+  right: 0;
+}
+
+.flagOff {
+  display: none;
 }
