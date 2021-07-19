@@ -1,0 +1,20 @@
+.cartBox {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.cartButton {
+  background: none;
+  height: fit-content;
+  cursor: pointer;
+  border: none;
+  margin: 0 .4rem;
+}
+
+.cartItems {
+  background: #F8475F;
+  color: white;
+  padding: .4rem;
+  border-radius: 50%;
+}
